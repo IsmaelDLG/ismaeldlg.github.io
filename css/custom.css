@@ -16,7 +16,7 @@
 html,
 body {
     padding: 0;
-    margin: 0 auto;
+    margin: auto;
     height: 100%;
     width: 100%;
     min-width: 300px;
@@ -98,9 +98,10 @@ a.active {
 }
 
 section {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     margin: 0 auto;
+    padding: 20px 0;
 
     display: flex;
     flex-flow: column nowrap;
@@ -132,6 +133,7 @@ section article.accordion .accordion-body {
 /* SECTION ABOUT ME */
 
 #about-me {
+    padding-top: 50px;
     display: flex;
     flex-flow: column nowrap;
 }
@@ -190,7 +192,12 @@ section article.accordion .accordion-body {
     align-items: center;
     max-width: 250px;
     margin-right: 20px;
+    margin-bottom: 10px;
     --bs-card-bg: var(--secondaryBackColor);
+}
+
+#projects .card h5 {
+    word-break: normal;
 }
 
 #projects .card img {
@@ -199,7 +206,9 @@ section article.accordion .accordion-body {
     object-fit: cover;
 }
 
-
+#projects .card .card-text {
+    display: none;
+}
 
 
 @media (max-width: 576px) {
@@ -208,6 +217,14 @@ section article.accordion .accordion-body {
     .nav-link:hover {
         font-size: var(--FontSize-S);
         padding: 0.25rem;
+    }
+
+    #projects .card img {
+        width: 150px;
+    }
+
+    #projects .card .card-body {
+        width: 150px;
     }
 }
 
