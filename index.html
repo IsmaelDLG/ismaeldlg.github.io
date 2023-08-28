@@ -5,10 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="css/custom.css" />
   <title>IsmaelDLG - Portfolio</title>
@@ -25,6 +25,7 @@
       <a class="nav-link active" aria-current="page" href="#about-me">About</a>
       <a class="nav-link" aria-current="page" href="#timeline">Timeline</a>
       <a class="nav-link" aria-current="page" href="#projects">Projects</a>
+      <a class="nav-link" aria-current="page" href="#contact">Contact</a>
     </nav>
   </div>
   <section id="about-me">
@@ -33,19 +34,40 @@
         <img id="profile-picture" class="box-circle" alt="Profile Picture" src="./img/profile-zoomed.jpg" />
       </header>
       <article>
-        <h1>Ismael de la Gracia Cobos</h1>
-
+        <h1>Hi!</h1>
         <p>
-          Hi and welcome to my webpage. I graduated on Software Engineering on
-          March 2021 and I have worked as a developer ever since. I am
-          currently working as a Junior Fullstack Web Developer, but I spend more time on
-          backend technologies.
+          I'm Ismael de la Gracia Cobos and I am a Fullstack Web Developer currently working at Lleida.net remotely.
+          This is my technological stack:
         </p>
-        <p>
-          I love practicing sports like weightlifting, paddle tennis and beach
-          volleyball and I also enjoy modeling and printing 3D stuff.
-        </p>
-
+        <div class="stack">
+          <span>
+            <h3>Front End</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS & SASS</li>
+              <li>Bootstrap</li>
+              <li>React.js</li>
+              <li>Redux</li>
+            </ul>
+          </span>
+          <span>
+            <h3>Back End</h3>
+            <ul>
+              <li>Python3</li>
+              <li>FastAPI</li>
+              <li>SQL (SQLite, MySQL, Postgres)</li>
+              <li>NoSQL (MongoDB)</li>
+            </ul>
+          </span>
+          <span>
+            <h3>Others</h3>
+            <ul>
+              <li>Git</li>
+              <li>Docker</li>
+              <li>Linux & Bash</li>
+            </ul>
+          </span>
+        </div>
       </article>
     </div>
     <footer>
@@ -73,7 +95,7 @@
   </section>
   <section id="timeline">
     <article>
-      <h1>Education and Work experience</h1>
+      <h2>Education and Work experience</h2>
       <ul>
         <li style="--accent-color:#41516C">
           <div class="date">2021-04</div>
@@ -111,7 +133,7 @@
   <section id="projects">
     <article>
       <div>
-        <h1>Projects</h1>
+        <h2>Projects</h2>
         <div class="card-wrapper">
           <div class="card">
             <img class="card-img-top" src="img/25+5clock.png" alt="25+5 clock image">
@@ -152,6 +174,69 @@
       </div>
     </article>
   </section>
+  <section id="contact">
+    <article>
+      <h2>Contact</h2>
+      <form id="#contact-form">
+        <div class="form-floating mb-2">
+          <input class="form-control" id="contact-email" type="email" name="email" placeholder="name@example.com">
+          <label class="form-label" for="contact-name">Email</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input class="form-control" id="contact-name" type="text" name="name" placeholder="Ismael de la Gracia Cobos">
+          <label class="form-label" for="contact-name">Name</label>
+        </div>
+        <div class="form-floating mb-2">
+          <textarea id="contact-message" class="form-control" name="message"
+            placeholder="Hi, please contact me!"></textarea>
+          <label class="form-label" for="contact-message">Message</label>
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </article>
+    <footer>
+      <div class="alert alert-success" role="alert">
+        Contact information sent succesfully. I will message you soon! :)
+      </div>
+      <div class="alert alert-danger" role="alert">
+        There was an error sending the information...
+      </div>
+    </footer>
+  </section>
+  <script>
+    const form = document.getElementById('#contact-form')
+    const submitButton = form.querySelector('button[type="submit"]')
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxsvDR4hzkhoCEWt-8egp1ozL6uep3lDD_jdUHK9s67jFOicv7IYZfa9TxLjBa0NvbV2Q/exec'
+
+    form.addEventListener('submit', e => {
+      submitButton.disabled = true
+      e.preventDefault()
+      let requestBody = new FormData(form)
+      fetch(scriptURL, { method: 'POST', body: requestBody })
+        .then(response => {
+          document.querySelector("#contact .alert.alert-success").style.display = "block";
+          setTimeout(() => {
+            document.querySelector("#contact .alert.alert-success").style.display = "none";
+          }, 5000);
+          form.querySelectorAll("input").forEach((element, key) => {
+            element.value = "";
+          });
+          form.querySelectorAll("textarea").forEach((element, key) => {
+            element.value = "";
+          });
+          submitButton.disabled = false
+        })
+        .catch(error => {
+          console.log(error)
+          document.querySelector("#contact .alert.alert-danger").style.display = "block";
+          setTimeout(() => {
+            document.querySelector("#contact .alert.alert-danger").style.display = "none";
+          }, 5000);
+          submitButton.disabled = false
+        }
+        )
+    });
+  </script>
 </body>
 
 </html>

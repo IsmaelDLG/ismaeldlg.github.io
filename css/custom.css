@@ -66,6 +66,10 @@ h1 {
     color: #FFFFFF;
 }
 
+.btn.btn-primary {
+    background-color: #1B5F8C;
+}
+
 /* NAV BAR */
 .nav-wrapper {
     position: fixed;
@@ -154,6 +158,14 @@ section article.accordion .accordion-body {
 #about-me article {
     display: flex;
     flex-flow: column nowrap;
+}
+
+#about-me .stack span {
+    flex: 1
+}
+
+#about-me .stack ul {
+    list-style: none;
 }
 
 #about-me footer {
@@ -388,6 +400,27 @@ section article.accordion .accordion-body {
     display: none;
 }
 
+/* SECTION CONCACT */
+#contact article {
+    width: 90%;
+    max-width: 576px;
+}
+
+#contact form {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+}
+
+#contact form textarea {
+    height: 10rem;
+}
+
+#contact .alert {
+    margin-top: 10px;
+    display: none;
+}
+
 
 @media (max-width: 576px) {
 
@@ -421,12 +454,14 @@ section article.accordion .accordion-body {
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
     #about-me div {
         display: flex;
         flex-flow: row nowrap;
     }
+}
 
+@media (min-width: 992px) {
     #about-me div header {
         width: 450px;
     }
