@@ -56,3 +56,11 @@ a:visited {
     width: 11px;
     content: "";
 }
+
+.same-width-row {
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
