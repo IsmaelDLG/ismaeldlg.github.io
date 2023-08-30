@@ -19,7 +19,7 @@
 </head>
 
 <body class="container-fluid">
-  <div class="fixed-background"></div>
+  <div class="fixed-background bg-gradient bg-light"></div>
   <div class="d-none d-md-block fixed-foreground bottom left vertical-text">
     <a class="linkedin-link" href="https://www.linkedin.com/in/ismael-de-la-gracia-cobos/" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-linkedin"
@@ -40,15 +40,13 @@
   <div class="d-none d-md-block fixed-foreground bottom right vertical-text">
     <a href="mailto:ismadlg.works@gmail.com">ismadlg.works@gmail.com</a>
   </div>
-  <div class="nav-wrapper">
-    <nav class="nav justify-content-center">
-      <a class="nav-link active" aria-current="page" href="#about-me">About</a>
-      <a class="nav-link" aria-current="page" href="#education-experience">Timeline</a>
-      <a class="nav-link" aria-current="page" href="#projects">Projects</a>
-      <a class="nav-link" aria-current="page" href="#contact">Contact</a>
-    </nav>
-  </div>
-  <section id="about-me">
+  <nav class="nav w-100 d-flex align-items-center justify-content-center text-center">
+    <a class="nav-link active" aria-current="page" href="#about-me">About</a>
+    <a class="nav-link" aria-current="page" href="#education-experience">Timeline</a>
+    <a class="nav-link" aria-current="page" href="#projects">Projects</a>
+    <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+  </nav>
+  <section id="about-me" class="">
     <header
       class="container d-flex flex-column-reverse align-items-center text-center flex-md-row align-items-md-end justify-content-md-around text-md-start">
       <div class="container mt-3">
@@ -198,11 +196,11 @@
     <p>I check my mailbox on a daily basis. Feel free to mail me about any relevant oportunities you have in mind for
       me!</p>
 
-    <button class="btn btn-primary mt-3">Mail Me</button>
+    <a id="mail-me" class="btn btn-primary mt-3" href="mailto:ismadlg.works@gmail.com">Mail Me</a>
 
   </section>
   <footer class="mt-5 bt-1 text-center">
-    <p>Design and coded by Ismael de la Gracia Cobos.</p>
+    <p>Designed and coded by Ismael de la Gracia Cobos.</p>
     <p>See more at my <a href="https://github.com/IsmaelDLG">Github</a>!</p>
   </footer>
 </body>

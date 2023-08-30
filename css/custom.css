@@ -22,10 +22,6 @@
     text-orientation: upright;
 }
 
-nav.nav {
-    font-size: small;
-}
-
 a,
 a:hover,
 a:focus,
@@ -84,6 +80,10 @@ h3 {
     min-height: 50vh;
 }
 
+#mail-me {
+    font-size: large;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     nav.nav {
@@ -103,5 +103,9 @@ h3 {
 
     .stack {
         max-width: 70vw;
+    }
+
+    #mail-me {
+        font-size: x-large;
     }
 }
