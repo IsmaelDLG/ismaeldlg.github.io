@@ -1,3 +1,5 @@
+/* OVERLAY*/
+
 .fixed-foreground {
     z-index: 99;
     position: fixed;
@@ -20,6 +22,10 @@
     text-orientation: upright;
 }
 
+nav.nav {
+    font-size: small;
+}
+
 a,
 a:hover,
 a:focus,
@@ -31,10 +37,15 @@ a:visited {
     max-width: 350px;
 }
 
+h3 {
+    font-size: calc(1.45rem + 1.5vw);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
 
 .timeline {
     border-left: 1px solid hsl(0, 0%, 90%);
-    margin-left: 3rem;
     position: relative;
     list-style: none;
 }
@@ -65,6 +76,32 @@ a:visited {
     justify-content: space-between;
 }
 
+.same-width-row span:first-child {
+    margin-right: 1rem;
+}
+
 #contact {
     min-height: 50vh;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    nav.nav {
+        font-size: medium;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    nav.nav {
+        font-size: large;
+    }
+
+    .timeline {
+        margin-left: 3rem;
+    }
+
+    .stack {
+        max-width: 70vw;
+    }
 }
