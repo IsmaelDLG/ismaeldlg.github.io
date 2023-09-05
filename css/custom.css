@@ -29,6 +29,10 @@ a:visited {
     text-decoration: none;
 }
 
+.nav {
+    font-weight: 600;
+}
+
 #profile-picture {
     max-width: 350px;
 }
