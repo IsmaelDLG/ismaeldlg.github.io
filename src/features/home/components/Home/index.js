@@ -1,10 +1,11 @@
 import { Typography, Button } from "@material-tailwind/react";
 
 import IconLink from "../../../../components/IconLink";
+import Section from "../../../../components/Section";
 
 function Home() {
   return (
-    <section id="home" className="w-3/5 h-screen mx-auto md:flex md:flex-row items-center">
+    <Section id="home">
       <div className="flex flex-col-reverse md:flex-row">
         <div className="flex-1">
           <Typography variant="h1" color="blue-gray" className="mb-3">
@@ -59,7 +60,7 @@ function Home() {
           <img alt="profile" src="/profile.png" className="w-1/2 mx-auto" />
         </span>
       </div>
-    </section>
+    </Section>
   );
 }
 

@@ -44,7 +44,7 @@ function StickyNavbar() {
   );
 
   return (
-    <Navbar className="fixed top-0 w-full max-w-full rounded-none shadow-bt-lg backdrop-blur text-blue-gray-900">
+    <Navbar className="fixed top-0 w-full max-w-full rounded-none shadow-bt-lg text-blue-gray-900 z-10">
       <div className="flex items-center justify-center">
         <div className="hidden lg:block">{navList}</div>
         <IconButton
