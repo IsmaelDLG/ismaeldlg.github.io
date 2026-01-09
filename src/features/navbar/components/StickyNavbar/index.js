@@ -30,11 +30,13 @@ function StickyNavbar() {
           About
         </a>
       </Typography>
+      {/* TODO: Add Stack section
       <Typography as="li" variant="h6">
         <a href="#stack" className="flex items-center">
           Stack
         </a>
       </Typography>
+       */}
       <Typography as="li" variant="h6">
         <a href="#contact" className="flex items-center">
           Contact
@@ -44,7 +46,7 @@ function StickyNavbar() {
   );
 
   return (
-    <Navbar className="fixed top-0 w-full max-w-full rounded-none shadow-bt-lg text-blue-gray-900 z-10">
+    <Navbar className="sticky top-0 w-full max-w-full rounded-none shadow-bt-lg text-blue-gray-900 z-10">
       <div className="flex items-center justify-center">
         <div className="hidden lg:block">{navList}</div>
         <IconButton

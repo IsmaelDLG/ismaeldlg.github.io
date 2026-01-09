@@ -5,9 +5,9 @@ import Section from "../../../../components/Section";
 
 function Home() {
   return (
-    <Section id="home">
-      <div className="flex flex-col-reverse md:flex-row">
-        <div className="flex-1">
+    <Section id="home" className={""}>
+      <div className="flex flex-col-reverse lg:flex-row">
+        <div className="flex-1 text-center lg:text-left">
           <Typography variant="h1" color="blue-gray" className="mb-3">
             Hi, I'm Ismael
           </Typography>
@@ -23,12 +23,12 @@ function Home() {
             is what drives me to continuously improve my skills and deliver
             high-quality work.
           </Typography>
-          <span className="block mt-10 flex gap-8">
+          <span className="block mt-10 flex gap-8 justify-center lg:justify-start">
             <IconLink icon={"email"} />
             <IconLink icon={"github"} />
             <IconLink icon={"linkedin"} />
           </span>
-          <span className="block mt-6">
+          <span className="block mt-6 flex justify-center lg:justify-start">
             <Button
               variant="text"
               size="md"
@@ -56,7 +56,7 @@ function Home() {
             </Button>
           </span>
         </div>
-        <span className="flex-1">
+        <span className="flex-1 p-6">
           <img alt="profile" src="/profile.png" className="w-1/2 mx-auto" />
         </span>
       </div>

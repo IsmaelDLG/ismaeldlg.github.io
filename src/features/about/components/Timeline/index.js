@@ -49,17 +49,22 @@ export default function Timeline({}) {
   }, [timeline]);
 
   return (
-    <div className="relative border-l border-neutral-300 dark:border-neutral-700 mt-6">
-      {timelineData
-        .map((item, index) => (
-          <TimelineItem
-            key={index}
-            itemIndex={index}
-            item={item}
-            open={open}
-            handleOnClick={handleOnClick}
-          />
-        ))}
+    <div className="relative flex flex-row mt-6">
+      <div className="border-l border-blue-gray-500">
+      </div>
+      <div>
+        {timelineData
+          .map((item, index) => (
+            <TimelineItem
+              key={index}
+              className={index !== timelineData.length - 1 ? "pb-4" : ""}
+              itemIndex={index}
+              item={item}
+              open={open}
+              handleOnClick={handleOnClick}
+            />
+          ))}
+        </div>
     </div>
   );
 }

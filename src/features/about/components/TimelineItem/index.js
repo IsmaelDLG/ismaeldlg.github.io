@@ -1,11 +1,11 @@
 import { Typography, Button } from "@material-tailwind/react";
 import { useMemo } from "react";
 
-export default function TimelineItem({ itemIndex, item, open, handleOnClick }) {
+export default function TimelineItem({ className,itemIndex, item, open, handleOnClick }) {
   const isOpen = useMemo(() => open === itemIndex, [open, itemIndex]);
 
   return (
-    <div className="relative pl-8 pb-4 timeline-item">
+    <div className={`${className} relative pl-8 timeline-item`}>
       {/* Punto */}
       <span className="absolute left-[-7px] top-2 h-3 w-3 rounded-full bg-neutral-800 dark:bg-gray-200" />
 
