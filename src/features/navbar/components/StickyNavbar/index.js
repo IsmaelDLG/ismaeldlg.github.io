@@ -18,6 +18,20 @@ function StickyNavbar() {
     );
   }, []);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!event.target.closest("#navbar")) {
+        setOpenNav(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
+
   const navList = (
     <ul className="flex flex-col lg:flex-row lg:justify-center lg:gap-6">
       <Typography as="li" variant="h6">
@@ -46,7 +60,7 @@ function StickyNavbar() {
   );
 
   return (
-    <Navbar className="sticky top-0 w-full max-w-full rounded-none shadow-bt-lg text-blue-gray-900 z-10">
+    <Navbar id="navbar" className="sticky md:fixed top-0 w-full max-w-full rounded-none shadow-bt-lg text-blue-gray-900 z-10">
       <div className="flex items-center justify-center">
         <div className="hidden lg:block">{navList}</div>
         <IconButton
