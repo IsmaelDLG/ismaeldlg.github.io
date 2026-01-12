@@ -2,6 +2,7 @@ import { IconsOverlay } from '../features/floatingIcons/components';
 import { StickyNavbar } from '../features/navbar/components';
 import { About } from '../features/about/components';
 import { Home } from '../features/home/components';
+import { Contact } from '../features/contact/components';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       {/* section stack */}
       {/* section projects */}
       {/* section contact */}
+      <Contact />
       {/* footer */}
     </div>
   );
