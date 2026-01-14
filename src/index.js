@@ -4,6 +4,7 @@ import './styles/index.css';
 import App from './app/App';
 
 import { ThemeProvider } from "@material-tailwind/react";
+require('dotenv').config();
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
