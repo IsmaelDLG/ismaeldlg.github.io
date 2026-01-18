@@ -1,4 +1,3 @@
-import { IconsOverlay } from '../features/floatingIcons/components';
 import { StickyNavbar } from '../features/navbar/components';
 import { About } from '../features/about/components';
 import { Home } from '../features/home/components';
