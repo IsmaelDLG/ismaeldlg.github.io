@@ -1,13 +1,10 @@
-import { Button, Typography } from "@material-tailwind/react";
+import { Button, Typography, Card } from "@material-tailwind/react";
 import { Section } from "../../../../components";
 
 export default function Contact() {
   return (
     <Section id="contact">
-      <div>
-      <Typography variant="h1" color="black" className="mb-3 text-center">
-        Contact Me
-      </Typography>
+      {/*
       <Typography variant="lead" color="black" className="mb-6 text-center">
         {process.env.REACT_APP_TELEGRAM_CHANNEL_ID}
       </Typography>
@@ -23,7 +20,41 @@ export default function Contact() {
       }}>
         Send Message
       </Button>
-      </div>
+      */}
+      <Card color="transparent" shadow={false} className="">
+        <Typography variant="h3" color="blue-gray" className="mb-4 text-center">
+          Contact Me
+        </Typography>
+        <Typography variant="lead" color="black" className="mb-6 text-center">
+          Feel free to reach out for collaborations or just a friendly hello!
+        </Typography>
+        <div className="flex justify-center space-x-4">
+          <Button
+            variant="outlined"
+            color="blue"
+            size="lg"
+            onClick={() => window.location.href = "mailto:ismadlg.works@gmail.com"}
+          >
+            <div className="flex flex-row items-center">
+              <span className="block fa-solid fa-envelope text-xl pr-2"></span>
+              <Typography size="md">Email Me</Typography>
+            </div>
+          </Button>
+          <Button
+            className=""
+            variant="outlined"
+            color="blue"
+            size="lg"
+            onClick={() => window.open("https://www.linkedin.com/in/ismaeldlg/", "_blank")}
+          >
+            <div className="flex flex-row items-center">
+
+              <span className="fa-brands fa-linkedin text-xl pr-2"></span>
+              <Typography size="md">Linked In</Typography>
+            </div>
+          </Button>
+        </div>
+      </Card>
     </Section>
   );
 }

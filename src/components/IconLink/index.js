@@ -20,7 +20,7 @@ function IconLink({ icon }) {
       case "github":
         return "https://github.com/IsmaelDLG";
       case "linkedin":
-        return "https://www.linkedin.com/in/ismael-de-la-gracia-cobos/";
+        return "https://www.linkedin.com/in/ismaeldlg/";
       case "email":
         return "mailto:ismadlg.works@gmail.com";
       default:
