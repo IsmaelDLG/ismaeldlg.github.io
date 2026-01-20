@@ -57,7 +57,7 @@ function Home() {
           </span>
         </div>
         <span className="flex-1 p-6">
-          <img alt="profile" src="/profile.png" className="w-1/2 mx-auto" />
+          <img alt="profile" src="/avatar.png" className="w-3/4 mx-auto" />
         </span>
       </div>
     </Section>
