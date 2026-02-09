@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import { timeline } from "../../consts";
 import TimelineItem from "../TimelineItem";
 
-export default function Timeline({}) {
+export default function Timeline() {
   const [open, setOpen] = useState(null);
 
   useEffect(() => {
