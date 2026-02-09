@@ -6,19 +6,19 @@ export default function TimelineItem({ className,itemIndex, item, open, handleOn
   const isOpen = useMemo(() => open === itemIndex, [open, itemIndex]);
 
   return (
-    <div className={`${className} relative timeline-item pl-8 pt-4 hover:opacity-70 duration-300`}>
+    <div className={`${className} relative timeline-item pl-8 pt-4 hover:opacity-90 duration-300`}>
       {/* Punto x
       <span className="absolute left-[-6px] top-2 h-3 w-3 rounded-full bg-gray-200" />
       */}
       {/* Cabecera */}
       <button
         onClick={() => handleOnClick(itemIndex)}
-        className="w-full text-left border-b"
+        className="w-full text-left border-b border-discord-200"
       >
-        <Typography variant="lead" color="black">
+        <Typography variant="lead" className="text-discord-900">
           {item.title} · {item.place}
         </Typography>
-        <Typography variant="small" color="black">
+        <Typography variant="small" className="text-discord-800">
           {item.startDate} - {item.endDate || "Present"}
         </Typography>
       </button>
@@ -32,7 +32,7 @@ export default function TimelineItem({ className,itemIndex, item, open, handleOn
         }`}
       >
         <div className="overflow-hidden">
-          <Typography variant="paragraph" color="black" className="py-2">
+          <Typography variant="paragraph" className="py-2 text-discord-900">
             {item.description}
           </Typography>
 

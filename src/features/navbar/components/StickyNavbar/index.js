@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import {
   Navbar,
   Typography,
-  Button,
   IconButton,
   Collapse,
 } from "@material-tailwind/react";
@@ -35,12 +34,12 @@ function StickyNavbar() {
   const navList = (
     <ul className="flex flex-col lg:flex-row lg:justify-center lg:gap-6">
       <Typography as="li" variant="h6">
-        <a href="#home" className="flex items-center">
+        <a href="#home" className="flex items-center text-discord-700 hover:text-discord-900">
           Home
         </a>
       </Typography>
       <Typography as="li" variant="h6">
-        <a href="#about" className="flex items-center">
+        <a href="#about" className="flex items-center text-discord-700 hover:text-discord-900">
           About
         </a>
       </Typography>
@@ -52,7 +51,7 @@ function StickyNavbar() {
       </Typography>
        */}
       <Typography as="li" variant="h6">
-        <a href="#contact" className="flex items-center">
+        <a href="#contact" className="flex items-center text-discord-700 hover:text-discord-900">
           Contact
         </a>
       </Typography>
@@ -60,7 +59,7 @@ function StickyNavbar() {
   );
 
   return (
-    <Navbar id="navbar" className="sticky md:fixed top-0 w-full max-w-full rounded-none shadow-bt-lg text-blue-gray-900 z-10">
+    <Navbar id="navbar" className="sticky md:fixed top-0 w-full max-w-full rounded-none shadow-bt-lg text-discord-700 z-10 bg-white/80 backdrop-blur">
       <div className="flex items-center justify-center">
         <div className="hidden lg:block">{navList}</div>
         <IconButton
@@ -100,7 +99,7 @@ function StickyNavbar() {
           )}
         </IconButton>
       </div>
-      <Collapse open={openNav} className="text-blue-gray-900">
+      <Collapse open={openNav} className="text-discord-700">
         {navList}
       </Collapse>
     </Navbar>

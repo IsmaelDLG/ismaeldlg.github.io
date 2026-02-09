@@ -45,12 +45,11 @@ export default function Timeline({}) {
         durationPerc,
       };
     })
-
-  }, [timeline]);
+  }, []);
 
   return (
     <div className="relative flex flex-row mt-6 w-full">
-      <div className="border-l border-gray-600">
+      <div className="border-l border-discord-300">
       </div>
       <div className="w-full">
         {timelineData

@@ -22,18 +22,18 @@ export default function Contact() {
       </Button>
       */}
       <Card color="transparent" shadow={false} className="">
-        <Typography variant="h3" color="blue-gray" className="mb-4 text-center">
+        <Typography variant="h3" className="mb-4 text-center text-discord-900">
           Contact Me
         </Typography>
-        <Typography variant="lead" color="black" className="mb-6 text-center">
+        <Typography variant="lead" className="mb-6 text-center text-discord-800">
           Feel free to reach out for collaborations or just a friendly hello!
         </Typography>
         <div className="flex justify-center space-x-4">
           <Button
             variant="outlined"
-            color="blue"
             size="lg"
             onClick={() => window.location.href = "mailto:ismadlg.works@gmail.com"}
+            className="border-discord-600 text-discord-700 hover:bg-discord-600 hover:text-white rounded-md"
           >
             <div className="flex flex-row items-center">
               <span className="block fa-solid fa-envelope text-xl pr-2"></span>
@@ -41,11 +41,10 @@ export default function Contact() {
             </div>
           </Button>
           <Button
-            className=""
             variant="outlined"
-            color="blue"
             size="lg"
             onClick={() => window.open("https://www.linkedin.com/in/ismaeldlg/", "_blank")}
+            className="border-discord-600 text-discord-700 hover:bg-discord-600 hover:text-white rounded-md"
           >
             <div className="flex flex-row items-center">
 
